@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# React Practice Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a **React practice project** where you can:
 
-## Available Scripts
+- Add data through a form.
+- Display data in a table.
+- Edit and delete data.
+- All data is saved to a **JSON server** for persistence.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🔹 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Add Data:** Fill the form and submit, new data will appear in the table.
+- **Edit Data:** Click the pencil icon to edit a row, update the data.
+- **Delete Data:** Click the trash icon to delete a row from the table and JSON server.
+- **JSON Server:** Data is stored and fetched from a local JSON server (`db.json`).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **`src/`** → Contains React components (Form, Table, etc.)
+- **`public/`** → Static files like index.html
+- **`.gitignore`** → Excludes `node_modules/` and other unnecessary files from GitHub.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💻 Installation & Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Follow these steps to use the project:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository:**
 
-### `npm run eject`
+```bash
+git clone https://github.com/muniralways/React-practice.git
+````
+````
+npm install
+````
+## Install JSON Server globally (if not installed):
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+````
+npm install -g json-server
+````
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Start JSON Server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+```
+json-server --watch db.json --port 8000
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## This will run a local server at http://localhost:8000/users.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Data changes (add/edit/delete) will be stored in db.json.
 
-### Code Splitting
+Start React app:
+````
+npm start
+````
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Opens the app in your browser at http://localhost:3000.
 
-### Analyzing the Bundle Size
+⚡ Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Add Data: Fill the form (Name, Email, Photo URL) and click Add.
 
-### Making a Progressive Web App
+Edit Data: Click the pencil icon in the table row → Update the form → Submit.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Delete Data: Click the trash icon → Row is removed and deleted from JSON server.
 
-### Advanced Configuration
+Data Persistence: All changes are saved in db.json.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+📝 Notes
 
-### Deployment
+Make sure JSON Server is running before starting the React app, otherwise the table will not display any data.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To reset data, edit db.json manually or restart JSON server.
 
-### `npm run build` fails to minify
+Use modern browsers for best results.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📌 Commands Summary
+Command	Purpose
+git clone <repo>	Clone the project
+npm install	Install dependencies
+npm start	Run React app
+json-server --watch db.json --port 8000	Run JSON server
+
+
+
